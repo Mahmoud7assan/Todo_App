@@ -11,6 +11,7 @@ class MyThemes {
   static Color blackColor = Colors.black;
   static ThemeData LightTheme = ThemeData(
       primaryColor: primaryLight,
+      backgroundColor: blackColor,
       iconTheme: IconThemeData(color: blueColor),
       scaffoldBackgroundColor: primaryLight,
       appBarTheme: AppBarTheme(
@@ -18,9 +19,11 @@ class MyThemes {
         iconTheme: IconThemeData(color: whiteColor),
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: whiteColor,
+        backgroundColor: Colors.transparent,
         selectedItemColor: blueColor,
         unselectedItemColor: greyColor,
+        elevation: 0
+
       ),
       textTheme: TextTheme(
         headline1: TextStyle(
@@ -51,6 +54,7 @@ class MyThemes {
       ));
   static ThemeData DarkTheme = ThemeData(
     primaryColor: primaryDark,
+      backgroundColor: whiteColor,
       scaffoldBackgroundColor: primaryDark,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: blackColor,
@@ -86,6 +90,11 @@ class MyThemes {
           fontSize: 20,
           fontWeight: FontWeight.bold,
           color: whiteColor,
+        ),
+        subtitle1: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: blackColor,
         ),
       )
   );

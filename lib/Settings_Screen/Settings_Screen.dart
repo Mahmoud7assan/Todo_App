@@ -69,10 +69,11 @@ class _Setting_ScreenState extends State<Setting_Screen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(provider.themes == ThemeMode.light?
-                  AppLocalizations.of(context)!.light:
-                  AppLocalizations.of(context)!.dark
-                  ),
+                  Text(
+                      provider.themes == ThemeMode.light
+                          ? AppLocalizations.of(context)!.light
+                          : AppLocalizations.of(context)!.dark,
+                      style: Theme.of(context).textTheme.headline2),
                   Icon(
                     Icons.arrow_drop_down,
                     size: 25,
